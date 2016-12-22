@@ -1,16 +1,18 @@
 {
-  "name": "gjk-js",
+  "name": "gjk",
   "version": "0.0.1",
-  "description": "Implementation of fast collision detection GJK (Gilbert-Johnson-Keerthi) algorithm",
+  "description": "Implementation of GJK (Gilbert-Johnson-Keerthi) algorithm for calculation distance between convex polygons and intersection detection",
   "main": "./lib/gjk.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha ./test"
   },
   "keywords": [
     "gjk",
-    "collision"
+    "collision",
+    "polygons",
+    "distance"
   ],
-  "author": "RayzRazko",
+  "author": "RayzRazko <poliakov.rs@gmail.com>",
   "license": "ISC",
   "dependencies": {
     "vector2-node": "0.0.3"
