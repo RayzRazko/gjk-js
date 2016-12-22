@@ -1,5 +1,5 @@
 {
-  "name": "gjk",
+  "name": "gjk-js",
   "version": "0.0.1",
   "description": "Implementation of GJK (Gilbert-Johnson-Keerthi) algorithm for calculation distance between convex polygons and intersection detection",
   "main": "./lib/gjk.js",
