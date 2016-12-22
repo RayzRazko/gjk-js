@@ -2,7 +2,7 @@
   "name": "gjk-js",
   "version": "0.0.1",
   "description": "Implementation of fast collision detection GJK (Gilbert-Johnson-Keerthi) algorithm",
-  "main": "gjk.js",
+  "main": "./lib/gjk.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -14,5 +14,9 @@
   "license": "ISC",
   "dependencies": {
     "vector2-node": "0.0.3"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.2.0"
   }
 }
