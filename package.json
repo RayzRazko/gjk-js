@@ -2,7 +2,7 @@
   "name": "gjk-js",
   "version": "0.0.1",
   "description": "Implementation of fast collision detection GJK (Gilbert-Johnson-Keerthi) algorithm",
-  "main": "index.js",
+  "main": "gjk.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

@@ -1,7 +1,5 @@
 "use strict";
 const Vector2 = require('vector2-node');
-const Simplex = require('./simplex');
-
 
 /**
  * The value of 1/3
@@ -17,8 +15,6 @@ const tolerance = .0001;
 
 //the iterations count after which the result will be 0;
 const defaultLoopIterations = 30;
-
-let simplex = new Simplex();
 
 function isZero(number, tolerance) {
     return Math.abs(number - .0) < Math.abs(tolerance);
@@ -71,8 +67,10 @@ function getAreaWeightedCenter(polygon) {
 
     polygon.forEach((vector, index) => {
 
-        const p1 = vector;
-        const p2 = index + 1 === polygon.length ? polygon[0] : polygon[index + 1];
+        const p1 = new Vector2(vector);
+        const p2 = new Vector2(index + 1 === polygon.length ? polygon[0] : polygon[index + 1]);
+
+
 
         p1.add(-ac.x, -ac.y);
         p2.add(-ac.x, -ac.y);
@@ -112,7 +110,7 @@ function getFarthestPointInDirection(polygon, direction) {
 function support(polygon1, polygon2, direction) {
     const point1 = getFarthestPointInDirection(polygon1, direction);
     const point2 = getFarthestPointInDirection(polygon2, direction.negate());
-    return new Vector2(polygon1.sub(polygon2));
+    return new Vector2(point1.sub(point2));
 }
 
 /**
