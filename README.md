@@ -19,11 +19,21 @@ var notIntersectedPolygon = [
     {x: 3, y: 2}
 ];
 
+var intersectedPolygon = [
+    {x: 1.5, y: 1},
+    {x: 4, y: 1},
+    {x: 4, y: 2},
+    {x: 1.5, y: 2}
+]
+
 var distance = gjk.distance(polygon, notIntersectedPolygon); //1
+distance = gjk.distance(polygon, notIntersectedPolygon); //0
 var intersected = gjk.intersect(polygon, notIntersectedPolygon); //false
+intersected = gjk.intersect(polygon, intersectedPolygon); //true
 ```
 ## Polygons
 Polygons might be one of the next formats
+
 ### Array of objects
 ```javascript
 var polygon = [
